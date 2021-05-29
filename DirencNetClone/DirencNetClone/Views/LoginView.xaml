@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DirencNetClone.ViewModels"
+             x:Class="DirencNetClone.Views.LoginView" Visual="Material">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView >
+
+            <StackLayout>
+                <Label Text="GİRİŞ" FontSize="Large" TextColor="WhiteSmoke" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="Inter-Bold-slnt=0.tff"/>
+                <Entry x:Name="Giriş"
+                   Placeholder="E-Posta" PlaceholderColor="Gray" TextColor="Gray"  Text="{Binding UserEmail}"/>
+                <Entry x:Name="Parola"
+                   Placeholder="Parola" IsPassword="True"  PlaceholderColor="Gray" TextColor="Gray" Text="{Binding Password}" />
+                <Button Text="GİRİŞ" BorderWidth="2" TextColor="LightGray" FontSize="Medium"  BackgroundColor="Black" BorderColor="Gray" Command="{Binding LoginCommand}" CornerRadius="3" />
+
+                <Label Text="______________" TextColor="Gray" HorizontalOptions="Center"/>
+                <Label Text="Şifremi Unuttum " TextColor="Gray" HorizontalOptions="Center"/>
+                <Button  ImageSource="com_facebook_button_icon_white.png" Text="Facebook İle Giriş Yap" TextTransform="Default" BackgroundColor="Blue" />
+                <Button ImageSource="googleg_standard_color_18.png" Text=" Giriş Yap" TextTransform="Default" BackgroundColor="WhiteSmoke" TextColor="Gray"   />
+                <Button Text="KAYDET" TextColor="Gray" BackgroundColor="Black" BorderColor="Gray" CornerRadius="3" Command="{Binding RegisterCommand}" BorderWidth="2" FontAttributes="Bold"  />
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

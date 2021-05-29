@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             x:Class="DirencNetClone.Views.OrdersView">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ImageButton Source="info.png " Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit" VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked"/>
+            <pancake:PancakeView BackgroundColor="WhiteSmoke" Grid.Row="1" >
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Bizi Tercih Ettiğiniz İçin Teşekkür ederiz" />
+                    <Label x:Name="LabelOrderID" TextColor="Blue" FontSize="Subtitle"/>
+                    <Button Text="Tüm Siparişleri Görüntüle" WidthRequest="200" BackgroundColor="DodgerBlue" HorizontalOptions="Center" Clicked="Button_Clicked"/>
+
+                </StackLayout>
+            </pancake:PancakeView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
