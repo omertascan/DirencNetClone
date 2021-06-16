@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace DirencNetClone.ViewModels
 {
-    class ProductDetailsViewModel:BaseViewModel
+  public  class ProductDetailsViewModel:BaseViewModel
     {
         private ProductItem _SelectedProductItem;
         public ProductItem SelectedProductItem

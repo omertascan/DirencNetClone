@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DirencNetClone.Services;
 
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,10 +28,19 @@ namespace DirencNetClone.Views
 
                ;
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var bindingContext = BindingContext as CategoryViewModel;
+            if (bindingContext != null) { }
+                
+        }
 
         async void ImageButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+
+
 
         }
 
